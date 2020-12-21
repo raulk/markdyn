@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "enabled": ["coinbase"],
+    "symbols": ["BTCUSD", "FILUSD"]
+  },
+
+  "sinks": [
+    { "kind": "stdout" }
+  ],
+
+  "coinbase": {
+    "mappings": {
+      "FIL-USD": "FILUSD",
+      "BTC-USD": "BTCUSD"
+    }
+  },
+
+  "binance": {
+    "auth_key": "foo",
+    "secret_key": "foo",
+    "mappings": {
+      "FIL_USDT": "FILUSD",
+      "BTC_USDT": "BTCUSD"
+    }
+  }
+}
