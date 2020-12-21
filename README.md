@@ -1,7 +1,7 @@
 # markdyn
 
-markdyn is a tool to study crypto exchange market dynamics. It starts life being
-a data stream aggregator. It may do more in the future.
+markdyn is a tool to study market dynamics of cryptoassets. It starts life being
+an exchange data stream aggregator. It may do more in the future.
 
 Right now, I'm focusing on getting a normalised, consolidated data stream for
 the following items, in descending order of priority:
@@ -9,6 +9,17 @@ the following items, in descending order of priority:
 1. trades
 2. L2 order books
 3. L3 order flow (for exchanges that support it)
+
+## Try it out
+
+```shell
+$ git clone https://github.com/raulk/markdyn.git
+$ cd markdyn
+$ go build .
+$ ./markdyn example-config.json
+```
+
+Modify the configuration file to track more assets.
 
 ## Exchanges supported
 
@@ -24,17 +35,6 @@ the following items, in descending order of priority:
 - 🚧 rotating files (ndjson)
 - 🚧 databases -- TBD.
 - (add your own; submit a PR!)
-
-## Try it out
-
-```shell
-$ git clone https://github.com/raulk/markdyn.git
-$ cd markdyn
-$ go build .
-$ ./markdyn example-config.json
-```
-
-Modify th configuration to track more assets.
 
 ## Implementation details
 
