@@ -60,10 +60,12 @@ func (c *binanceConnector) handleTrade(evt *binance.WsTradeEvent) {
 	if err != nil {
 		// TODO send elsewhere.
 		log.Println(err)
+		return
 	}
 	quantity, err := strconv.ParseFloat(evt.Quantity, 64)
 	if err != nil {
 		log.Println(err)
+		return
 	}
 	side := model.SideBuyer
 	if !evt.IsBuyerMaker {

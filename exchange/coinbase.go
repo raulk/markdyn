@@ -90,10 +90,12 @@ func (c *coinbaseConnector) consume() {
 		price, err := strconv.ParseFloat(msg.Price, 64)
 		if err != nil {
 			log.Println(err)
+			continue
 		}
 		quantity, err := strconv.ParseFloat(msg.LastSize, 64)
 		if err != nil {
 			log.Println(err)
+			continue
 		}
 		side := model.SideBuyer
 		if msg.Side == "sell" {
